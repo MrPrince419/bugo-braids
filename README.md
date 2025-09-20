@@ -41,7 +41,3 @@ For braiding services, contact Bugo Braids directly:
 - Instagram: [@bugo_braids](https://www.instagram.com/bugo_braids)
 - TikTok: [@bugobraids](https://www.tiktok.com/@bugobraids)
 - WhatsApp: [Book an appointment](https://wa.me/message/ZYKJLQGPHPA5A1?src=qr)
-
-## License
-
-This project is open for inspiration and learning purposes. If you create a derivative work, we appreciate attribution but it's not required.
