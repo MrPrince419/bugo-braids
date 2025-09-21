@@ -6,6 +6,8 @@
 
 Bugo Braids is a professional hair braiding service based in Sault Ste Marie, specializing in high-quality braided hairstyles, cornrows, locs, and convenient home service.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-id/deploy-status)](https://app.netlify.com/sites/bugo-braids/deploys)
+
 ## About This Website
 
 This website was created for Bugo Braids to showcase their professional hair braiding services. The site features:

@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Bugo Braids website loaded');
+    
+    // Force initialization of footer elements
+    initializeFooter();
 
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('navToggle');
@@ -363,7 +366,69 @@ function openWhatsApp(customMessage) {
 }
 
 // Export functions for potential future use
+// Function to ensure footer elements are initialized and visible
+function initializeFooter() {
+    console.log('Initializing footer elements');
+    const footerSocial = document.querySelector('.footer-social');
+    const socialLinks = document.querySelector('.social-links');
+    
+    if (footerSocial) {
+        footerSocial.style.display = 'block';
+        footerSocial.style.visibility = 'visible';
+        footerSocial.style.opacity = '1';
+    }
+    
+    if (socialLinks) {
+        socialLinks.style.display = 'flex';
+        socialLinks.style.flexDirection = 'column';
+        socialLinks.style.visibility = 'visible';
+        socialLinks.style.opacity = '1';
+    }
+    
+    // Add a small delay to ensure elements are rendered
+    setTimeout(() => {
+        // Force reflow
+        if (footerSocial) footerSocial.offsetHeight;
+        if (socialLinks) socialLinks.offsetHeight;
+        console.log('Footer elements initialized');
+    }, 100);
+}
+
+// Also initialize on window load (backup for mobile browsers)
+window.addEventListener('load', function() {
+    console.log('Window loaded, initializing footer');
+    initializeFooter();
+    
+    // Performance monitoring
+    reportWebVitals();
+});
+
+// Performance monitoring function
+function reportWebVitals() {
+    if (window.performance && window.performance.getEntriesByType) {
+        // Get performance metrics when browser is idle
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                const navEntry = performance.getEntriesByType('navigation')[0];
+                const paintEntries = performance.getEntriesByType('paint');
+                
+                if (navEntry) {
+                    console.log('Page load time:', Math.round(navEntry.loadEventEnd - navEntry.startTime), 'ms');
+                }
+                
+                if (paintEntries.length > 0) {
+                    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+                    if (fcp) {
+                        console.log('First Contentful Paint:', Math.round(fcp.startTime), 'ms');
+                    }
+                }
+            });
+        }
+    }
+}
+
 window.BugoBraids = {
     scrollToTop: scrollToTop,
-    openWhatsApp: openWhatsApp
+    openWhatsApp: openWhatsApp,
+    reportWebVitals: reportWebVitals
 };
