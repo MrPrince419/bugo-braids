@@ -120,14 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // WhatsApp Integration with better error handling
     function openWhatsAppChat(message = null) {
-        const businessNumber = '1234567890'; // Replace with actual business WhatsApp number
+        // Use business message link format instead of direct number
+        const businessLink = 'https://wa.me/message/ZYKJLQGPHPA5A1?src=qr';
         const defaultMessage = message || 'Hi Bugo Braids! I would like to book an appointment for braiding services.';
         
         try {
-            const encodedMessage = encodeURIComponent(defaultMessage);
-            const whatsappUrl = `https://wa.me/${businessNumber}?text=${encodedMessage}`;
+            // For QR-based business links, we should use the link directly
+            const whatsappUrl = businessLink;
             
-            console.log('Opening WhatsApp:', whatsappUrl);
+            console.log('Opening WhatsApp Business:', whatsappUrl);
             
             // Try to open WhatsApp
             const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
@@ -183,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let url = '#';
             switch(platform.toLowerCase()) {
                 case 'instagram':
-                    url = 'https://instagram.com/bugobraids'; // Replace with actual Instagram handle
+                    url = 'https://www.instagram.com/bugo_braids/?utm_source=ig_web_button_share_sheet'; // Updated Instagram URL
                     break;
                 case 'facebook':
                     url = 'https://facebook.com/bugobraids'; // Replace with actual Facebook page

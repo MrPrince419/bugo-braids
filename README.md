@@ -25,7 +25,7 @@ This website was created for Bugo Braids to showcase their professional hair bra
 
 ## Hosting
 
-This website is hosted on [Netlify](https://netlify.com).
+This website is hosted on [Netlify](https://netlify.com) and is live at [bugo-braids.netlify.app](https://bugo-braids.netlify.app/).
 
 ## Usage Rights
 
@@ -38,6 +38,6 @@ This website design and code are available as inspiration for other businesses o
 ## Contact
 
 For braiding services, contact Bugo Braids directly:
-- Instagram: [@bugo_braids](https://www.instagram.com/bugo_braids)
+- Instagram: [@bugo_braids](https://www.instagram.com/bugo_braids/?utm_source=ig_web_button_share_sheet)
 - TikTok: [@bugobraids](https://www.tiktok.com/@bugobraids)
 - WhatsApp: [Book an appointment](https://wa.me/message/ZYKJLQGPHPA5A1?src=qr)

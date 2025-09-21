@@ -814,17 +814,18 @@ select.form-control {
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    top: 100%;
+    top: 80px; /* Fixed position from the top instead of 100% */
     left: 0;
     right: 0;
     background: var(--color-surface);
     flex-direction: column;
     padding: var(--space-24);
     box-shadow: var(--shadow-lg);
-    transform: translateY(-100%);
+    transform: translateY(-150%); /* Move further up when hidden */
     opacity: 0;
     visibility: hidden;
     transition: all var(--duration-normal) var(--ease-standard);
+    z-index: 1000; /* Ensure it's above other content */
   }
 
   .nav-menu.active {

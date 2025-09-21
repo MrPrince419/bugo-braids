@@ -86,4 +86,4 @@ To use the GitHub workflow we created:
 
 ## That's it!
 
-Your Bugo Braids website should now be live on Netlify with automatic deployments whenever you push changes to your GitHub repository.
+Your Bugo Braids website is now live at [https://bugo-braids.netlify.app/](https://bugo-braids.netlify.app/) with automatic deployments whenever you push changes to your GitHub repository.
